@@ -1,0 +1,32 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Anchors of Hope</title>
+    <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div>
+        <a href="{% url 'home' %}"
+          ><img
+            id="homepage-logo"
+            src="{% static 'aohcc_logo_1200px.png' %}"
+            alt="Anchors of Hope Counseling Center homepage."
+        /></a>
+      </div>
+      <div class="page-links">
+        <ul class="links">
+          <li><a href="">Our therapists</a></li>
+          <li><a href="">Groups and events</a></li>
+          <li><a href="">Insurance</a></li>
+          <li><a href="">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>

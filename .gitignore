@@ -1,0 +1,6 @@
+.git
+__pycache__
+venv
+static
+db.sqlite3
+roadmap.md
