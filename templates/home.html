@@ -1,11 +1,62 @@
-{% extends "base.html" %}
-{% load static %}
-
-{% block content %}
-    <div id="hero">
-        <img id="main-logo" alt="Anchors of Hope Counseling Center Logo" src="{% static 'aohcc_logo_1200px.png' %}"/>
-        <h1>Anchors of Hope Counseling Center</h1>
-        <p>Hello world!</p>
-    </div>
+{% extends "base.html" %} {% load static %} {% block content %}
+<div id="hero">
+  <h1>Anchors of Hope Counseling Center</h1>
+  <p>
+    Lorem Viverra ipsum nunc aliquet bibendum enim, facilisis gravida neque
+    convallis a cras semper auctor neque, vitae tempus quam pellentesque nec nam
+    aliquam sem. Elementum curabitur vitae nunc sed velit dignissim.
+  </p>
+</div>
+<h2 id="therapist-header">Our therapists</h2>
+<div id="therapists">
+  <div class="therapist">
+    <img
+      class="bio-pic"
+      alt="Doctor Ryan O'Farrell smiling at the camera."
+      src="{% static 'ofarrell_ryan.jpg' %}"
+    />
+    <h3>Ryan O'Farrell</h3>
+    <h4>Psychologist</h4>
+    <p>Credentials go here</p>
+    <p>Insurance goes here</p>
+    <a class="therapist-link" href="#">Learn more about Ryan</a>
+  </div>
+  <div class="therapist">
+    <img
+      class="bio-pic"
+      alt="Therapist Sarah Bateman smiling at the camera."
+      src="{% static 'bateman_sarah.jpg' %}"
+    />
+    <h3>Sarah Bateman</h3>
+    <h4>Licensed Professional Counselor Associate</h4>
+    <p>Credentials go here</p>
+    <p>Insurance goes here</p>
+    <a class="therapist-link" href="#">Learn more about Sarah</a>
+  </div>
+  <div class="therapist">
+    <img
+      class="bio-pic"
+      alt="Therapist Valerie Kidd smiling at the camera."
+      src="{% static 'kidd_valerie.jpg' %}"
+    />
+    <h3>Valerie Kidd</h3>
+    <h4>Licensed Professional Counselor</h4>
+    <p>Credentials go here</p>
+    <p>Insurance goes here</p>
+    <a class="therapist-link" href="#">Learn more about Valerie</a>
+  </div>
+  <div class="therapist">
+    <img
+      class="bio-pic"
+      alt="Therapist Tavis Root smiling at the camera."
+      src="{% static 'root_tavis.jpg' %}"
+    />
+    <h3>Tavis Root</h3>
+    <h4>Licensed Professional Counselor</h4>
+    <p>Credentials go here</p>
+    <p>Insurance goes here</p>
+    <a class="therapist-link" href="#">Learn more about Tavis</a>
+  </div>
+</div>
 
 {% endblock %}

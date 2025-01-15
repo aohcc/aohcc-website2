@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" />
   </head>
   <body>
-    <div class="navbar">
+    <nav class="navbar">
       <div>
         <a href="{% url 'home' %}"
           ><img
@@ -18,15 +18,13 @@
             alt="Anchors of Hope Counseling Center homepage."
         /></a>
       </div>
-      <div class="page-links">
-        <ul class="links">
-          <li><a href="">Our therapists</a></li>
-          <li><a href="">Groups and events</a></li>
-          <li><a href="">Insurance</a></li>
-          <li><a href="">FAQ</a></li>
-        </ul>
-      </div>
-    </div>
+      <ul class="links">
+        <li><a href="">About us</a></li>
+        <li><a href="">Events</a></li>
+        <li><a href="">Insurance</a></li>
+        <li><a href="">FAQ</a></li>
+      </ul>
+    </nav>
     {% block content %}{% endblock %}
   </body>
 </html>
