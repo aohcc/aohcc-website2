@@ -1,0 +1,68 @@
+html,
+body {
+  margin: 0;
+  color: #f4f3ee;
+  background-image: url("clayton-malquist-hfFM0QsCn3g-unsplash.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#container {
+  width: 90vw;
+  background-color: rgba(44, 42, 54, 0.8);
+  border-radius: 10px;
+  margin: 30px auto;
+}
+
+#homepage-link {
+  width: 100px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: inherit;
+  border: 1px solid #f4f3ee;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+
+
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 20px;
+  }
+
+  .links {
+    flex-direction: row;
+    width: 100vw;
+    font-weight: 600;
+    margin: 20px 0 0;
+  }
+
+  .links a {
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+}

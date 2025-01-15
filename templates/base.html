@@ -9,11 +9,12 @@
     <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" />
   </head>
   <body>
+  <div id="container">
     <nav class="navbar">
-      <div>
+      <div id="homepage-logo">
         <a href="{% url 'home' %}"
           ><img
-            id="homepage-logo"
+            id="homepage-link"
             src="{% static 'aohcc_logo_1200px.png' %}"
             alt="Anchors of Hope Counseling Center homepage."
         /></a>
@@ -26,5 +27,6 @@
       </ul>
     </nav>
     {% block content %}{% endblock %}
+    </div>
   </body>
 </html>

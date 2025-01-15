@@ -1,0 +1,54 @@
+#hero {
+    text-align: center;
+    padding: 15px;
+}
+
+#main-logo {
+    width: 100px;
+}
+
+#therapist-header {
+    text-align: center;
+}
+
+#therapists {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.therapist {
+    margin: 10px auto;
+    width: 45vw;
+    text-align: center;
+}
+
+.bio-pic {
+    width: 200px;
+    border: 1px solid #f4f3ee;
+    border-radius: 50%;
+}
+
+.therapist-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: #f4f3ee;
+    border: 1px solid #f4f3ee;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+@media (max-width: 480px) {
+    #therapists {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .therapist {
+        margin: 10px auto;
+        width: 80vw;
+        text-align: center;
+    }
+}
