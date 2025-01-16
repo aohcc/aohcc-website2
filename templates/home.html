@@ -9,53 +9,21 @@
 </div>
 <h2 id="therapist-header">Our therapists</h2>
 <div id="therapists">
+{% for therapist in therapists %}
   <div class="therapist">
     <img
       class="bio-pic"
-      alt="Doctor Ryan O'Farrell smiling at the camera."
-      src="{% static 'bio_pics/ofarrell_ryan.jpg' %}"
+      alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
+      src="{{ therapist.picture }}"
     />
-    <h3>Ryan O'Farrell</h3>
-    <h4>Psychologist</h4>
-    <p>Credentials go here</p>
-    <p>Insurance goes here</p>
-    <a class="therapist-link" href="#">Learn more about Ryan</a>
+    <h3 class="therapist-name">
+      {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
+    </h3>
+    <p class="insurances">Insurance accepted: {% for insurance in therapist.insurances.all %} | <strong>{{ insurance.name }}</strong> | {% endfor %}</p>
+    <a class="therapist-link" href="#"
+      >Learn more about {{ therapist.first_name }}</a
+    >
   </div>
-  <div class="therapist">
-    <img
-      class="bio-pic"
-      alt="Therapist Sarah Bateman smiling at the camera."
-      src="{% static 'bio_pics/bateman_sarah.jpg' %}"
-    />
-    <h3>Sarah Bateman</h3>
-    <h4>Licensed Professional Counselor Associate</h4>
-    <p>Credentials go here</p>
-    <p>Insurance goes here</p>
-    <a class="therapist-link" href="#">Learn more about Sarah</a>
-  </div>
-  <div class="therapist">
-    <img
-      class="bio-pic"
-      alt="Therapist Valerie Kidd smiling at the camera."
-      src="{% static 'bio_pics/kidd_valerie.jpg' %}"
-    />
-    <h3>Valerie Kidd</h3>
-    <h4>Licensed Professional Counselor</h4>
-    <p>Credentials go here</p>
-    <p>Insurance goes here</p>
-    <a class="therapist-link" href="#">Learn more about Valerie</a>
-  </div>
-  <div class="therapist">
-    <img
-      class="bio-pic"
-      alt="Therapist Tavis Root smiling at the camera."
-      src="{% static 'bio_pics/root_tavis.jpg' %}"
-    />
-    <h3>Tavis Root</h3>
-    <h4>Licensed Professional Counselor</h4>
-    <p>Credentials go here</p>
-    <p>Insurance goes here</p>
-    <a class="therapist-link" href="#">Learn more about Tavis</a>
-  </div>
+  {% endfor %}
 </div>
 {% endblock %}
