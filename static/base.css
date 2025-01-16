@@ -21,10 +21,12 @@ body {
 
 #homepage-link {
   width: 200px;
+  margin-bottom: 2em;
 }
 
 .navbar {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
@@ -45,7 +47,7 @@ body {
   border: 1px solid var(--outline-color);
   border-radius: 5px;
   padding: 5px 10px;
-  margin-left: 10px;
+  margin: 7px;
 }
 
 .links a:hover {
@@ -70,11 +72,10 @@ footer a {
   font-weight: 600;
 }
 
-footer a:hover {
+footer p a:hover {
   box-shadow: -3px 3px 5px black;
   transition: 300ms ease-in-out;
 }
-
 
 @media (max-width: 480px) {
   #container {
@@ -101,5 +102,6 @@ footer a:hover {
     border: 1px solid var(--outline-color);
     border-radius: 5px;
     padding: 5px 10px;
+    margin: 0;
   }
 }
