@@ -16,37 +16,50 @@
     <div id="container">
       <nav class="navbar">
         <div id="homepage-logo">
-          <a href="{% url 'home' %}"
-            ><img
+          <a href="{% url 'home' %}">
+            <img
               id="homepage-link"
               src="{% static 'logo/aohcc_logo_1200px.png' %}"
               alt="Anchors of Hope Counseling Center homepage."
-          /></a>
+            />
+          </a>
         </div>
         <ul class="links">
-          <li><a href="">About us</a></li>
-          <li><a href="">Events</a></li>
-          <li><a href="">Insurance</a></li>
-          <li><a href="">FAQ</a></li>
+          <li>
+            <a href="">About us</a>
+          </li>
+          <li>
+            <a href="">Events</a>
+          </li>
+          <li>
+            <a href="">Insurance</a>
+          </li>
+          <li>
+            <a href="">FAQ</a>
+          </li>
         </ul>
       </nav>
       {% block content %}{% endblock %}
       <footer>
         <div>
-          <a href="https://www.instagram.com/anchorsofhopecounseling/"
-            ><img
+          <a href="https://www.instagram.com/anchorsofhopecounseling/">
+            <img
               class="icon"
               alt="Check out Anchor of Hope's Instagram page."
               src="{% static 'icons/instagram.png' %}"
-          /></a>
-          <a href="https://www.facebook.com/share/1Afjuqig9p/?mibextid=LQQJ4d"
-            ><img
+            />
+          </a>
+          <a href="https://www.facebook.com/share/1Afjuqig9p/?mibextid=LQQJ4d">
+            <img
               class="icon"
               alt="Check out Anchor of Hope's Facebook page."
               src="{% static 'icons/facebook.png' %}"
-          /></a>
+            />
+          </a>
         </div>
-        <p><a href="#">Notice of Privacy Practices</a></p>
+        <p>
+          <a href="#">Notice of Privacy Practices</a>
+        </p>
         <p>
           Background photo by
           <a

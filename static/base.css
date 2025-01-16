@@ -9,6 +9,7 @@ body {
   background-image: url("background_img/clayton-malquist-hfFM0QsCn3g-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
 #container {
