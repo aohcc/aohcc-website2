@@ -4,5 +4,7 @@ venv
 static/bio_pics
 static/stock_images
 static/logo
+static/icons
+static/background_img
 db.sqlite3
 roadmap.md
