@@ -1,0 +1,14 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+#insurance {
+  width: 80%;
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  #insurance {
+    width: 90%;
+  }
+}

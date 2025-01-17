@@ -35,3 +35,18 @@ class Therapist(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.license_type}"
+
+
+class Faq(models.Model):
+    question = models.CharField(max_length=255)
+    answer = models.TextField()
+
+    def __str__(self) -> str:
+        return self.question
+
+class InsurancePageText(models.Model):
+    name = models.CharField(max_length=255)
+    text = models.TextField()
+
+    def __str__(self) -> str:
+        return self.name

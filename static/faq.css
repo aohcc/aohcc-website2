@@ -1,0 +1,27 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+.faq {
+  width: 80%;
+}
+
+#therapy-rates {
+  list-style: none;
+  padding: 0;
+}
+
+#therapy-rates li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--outline-color);
+}
+
+#therapy-rates-note {
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .faq {
+    width: 90%;
+  } 
+}

@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+<main id="insurance">
+  <h1>Use your insurance benefits</h1>
+  <section>
+    <h2>{{ insurance_sections.1.name }}</h2>
+    {{ insurance_sections.1.text }}
+  </section>
+  <section>
+    <h2>{{ insurance_sections.0.name }}</h2>
+    {{ insurance.sections.0.text|linebreaks }}
+  </section>
+</main>
+{% endblock %}
