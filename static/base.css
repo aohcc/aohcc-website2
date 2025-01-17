@@ -46,7 +46,7 @@ body {
   font-weight: 600;
   color: inherit;
   border: 1px solid var(--outline-color);
-  border-radius: 5px;
+  border-radius: 2rem;
   padding: 5px 10px;
   margin: 7px;
 }

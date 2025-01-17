@@ -4,7 +4,7 @@ from .models import Therapist
 
 
 def homepage_view(request):
-    therapists = Therapist.objects.all().order_by("last_name")
+    therapists = Therapist.objects.filter(active=True).order_by("last_name")
     return render(request, "home.html", {"therapists": therapists})
 
 def therapist_view(request, therapist_pk):
