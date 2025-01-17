@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% load static %} {% block content %}
-<div>
+<div class="therapist-bio">
   <img class="therapist-img" src="../{{ therapist.picture }}" alt="Therapist {{ therapist.first_name}} {{therapist.last_name}} smiling at the camera." />
   <h1>{{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}</h1>
   <h2></h2>
   <h2></h2>
-  <p>{{ therapist.bio }}</p>
+  <main class="bio-text">{{ therapist.bio|linebreaks }}</main>
 </div>
 {% endblock %}
