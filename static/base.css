@@ -48,13 +48,16 @@ body {
 }
 
 .links a {
+  display: inline-block;
   text-decoration: none;
+  text-align: center;
   font-weight: 600;
   color: inherit;
   border: 1px solid var(--outline-color);
   border-radius: 2rem;
   padding: 5px 10px;
-  margin: 7px;
+  margin: auto 1rem;
+  width: 90px;
 }
 
 .links a:hover {
@@ -69,17 +72,31 @@ footer {
   text-align: center;
 }
 
-.icon {
+#instagram,
+#facebook {
+  display: inline-block;
   width: 50px;
+  height: 50px;
   margin: 20px;
+  text-indent: -9999px;
 }
 
-footer a {
+#instagram {
+  background-image: url("icons/instagram.png");
+  background-size: cover;
+}
+
+#facebook {
+  background-image: url("icons/facebook.png");
+  background-size: cover;
+}
+
+.footer-link {
   color: var(--outline-color);
   font-weight: 600;
 }
 
-footer p a:hover {
+.footer-link:hover {
   box-shadow: -3px 3px 5px black;
   transition: 300ms ease-in-out;
 }
@@ -106,9 +123,6 @@ footer p a:hover {
 
   .links a {
     text-decoration: none;
-    border: 1px solid var(--outline-color);
-    border-radius: 5px;
-    padding: 5px 10px;
     margin: 0;
   }
 }
