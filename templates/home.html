@@ -20,7 +20,7 @@
       {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
     </h3>
     <p class="insurances">Insurance accepted: {% for insurance in therapist.insurances.all %} | <strong>{{ insurance.name }}</strong> | {% endfor %}</p>
-    <a class="therapist-link" href="#"
+<a class="therapist-link" href="/{{ therapist.id }}"
       >Learn more about {{ therapist.first_name }}</a
     >
   </div>

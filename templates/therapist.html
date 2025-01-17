@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div>
+  <img class="therapist-img" src="../{{ therapist.picture }}" alt="Therapist {{ therapist.first_name}} {{therapist.last_name}} smiling at the camera." />
+  <h1>{{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}</h1>
+  <h2></h2>
+  <h2></h2>
+  <p>{{ therapist.bio }}</p>
+</div>
+{% endblock %}

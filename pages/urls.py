@@ -2,8 +2,9 @@
 
 from django.urls import path
 
-from .views import home_page_view
+from .views import homepage_view, therapist_view
 
 urlpatterns = [
-    path("", home_page_view, name="home")
+    path("", homepage_view, name="home"),
+    path("<int:therapist_pk>/", therapist_view, name="therapist")
 ]
