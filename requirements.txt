@@ -1,0 +1,17 @@
+asgiref==3.8.1
+black==24.10.0
+click==8.1.8
+Django==5.1.3
+django-stubs==5.1.2
+django-stubs-ext==5.1.2
+mypy==1.14.1
+mypy-extensions==1.0.0
+nodeenv==1.9.1
+packaging==24.2
+pathspec==0.12.1
+pillow==11.1.0
+platformdirs==4.3.6
+pyright==1.1.392.post0
+sqlparse==0.5.1
+types-PyYAML==6.0.12.20241230
+typing_extensions==4.12.2

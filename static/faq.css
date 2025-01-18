@@ -5,6 +5,11 @@
 .faq {
   width: 80%;
   margin: 0 auto;
+  text-align: initial;
+}
+
+.faq h2 {
+  text-align: center;
 }
 
 #therapy-rates {
@@ -24,5 +29,5 @@
 @media (max-width: 480px) {
   .faq {
     width: 90%;
-  } 
+  }
 }

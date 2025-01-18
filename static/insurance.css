@@ -5,6 +5,11 @@
 #insurance {
   width: 80%;
   margin: 0 auto;
+  text-align: initial;
+}
+
+#insurance h1,
+#insurance h2 {
   text-align: center;
 }
 
