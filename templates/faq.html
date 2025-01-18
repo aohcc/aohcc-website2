@@ -15,7 +15,10 @@
     <li>Family psychotherapy* (55 min.): $175</li>
   </ul>
   {{ faqs.2.answer|linebreaks }}
-  <p id="therapy-rates-note">*Please note that all appointments with persons under the age of 18 are billed at the family psychotherapy rate.</p>
+  <p id="therapy-rates-note">
+    *Please note that all appointments with persons under the age of 18 are
+    billed at the family psychotherapy rate.
+  </p>
 </section>
 <section class="faq">
   <h2>{{ faqs.3.question }}</h2>
@@ -36,5 +39,10 @@
 <section class="faq">
   <h2>{{ faqs.7.question }}</h2>
   {{ faqs.7.answer|linebreaks }}
+  <a
+    id="confidentiality-download"
+    href="../static/documents/confidentiality_handout.docx"
+    >Download confidentiality handout</a
+  >
 </section>
 {% endblock %}
