@@ -44,9 +44,17 @@ class Faq(models.Model):
     def __str__(self) -> str:
         return self.question
 
+
 class InsurancePageText(models.Model):
     name = models.CharField(max_length=255)
     text = models.TextField()
 
     def __str__(self) -> str:
         return self.name
+
+
+class AboutUs(models.Model):
+    text = models.TextField()
+
+    def __str__(self) -> str:
+        return "About us"

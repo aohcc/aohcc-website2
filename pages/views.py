@@ -2,13 +2,14 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponseRedirect
 from django.core.mail import send_mail
 
-from .models import Therapist, Faq, InsurancePageText
+from .models import Therapist, Faq, InsurancePageText, AboutUs
 
 from .forms import ContactForm
 
 
 def homepage_view(request):
     therapists = Therapist.objects.filter(active=True).order_by("last_name")
+    about_us = AboutUs.objects.get(pk=1)
     if request.method == "POST":
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -31,7 +32,7 @@ def homepage_view(request):
     else:
         form = ContactForm()
 
-    context = {"therapists": therapists, "form": form}
+    context = {"therapists": therapists, "form": form, "about_us": about_us}
 
     return render(request, "home.html", context)
 

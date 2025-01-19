@@ -13,6 +13,18 @@
   text-align: center;
 }
 
+#insurance a {
+  color: var(--outline-color);
+  font-weight: 600;
+}
+
+#insurance a:hover,
+#insurance a:focus {
+  color: #ffccb0;
+  text-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
 @media (max-width: 480px) {
   #insurance {
     width: 90%;

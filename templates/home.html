@@ -1,34 +1,29 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<div id="hero">
-  <h1>Anchors of Hope Counseling Center</h1>
-  <main id="about-aohcc">
-    <p>
-      Lorem Viverra ipsum nunc aliquet bibendum enim, facilisis gravida neque
-      convallis a cras semper auctor neque, vitae tempus quam pellentesque nec
-      nam aliquam sem. Elementum curabitur vitae nunc sed velit dignissim.
-    </p>
-  </main>
-</div>
-<h2 id="therapist-header">Our therapists</h2>
-<div id="therapists">
-  {% for therapist in therapists %}
-  <div class="therapist">
-    <img
-      class="bio-pic"
-      alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
-      src="{{ therapist.picture }}"
-    />
-    <h3 class="therapist-name">
-      {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
-    </h3>
-    <p class="insurances">
-      Insurance: {% for insurance in therapist.insurances.all %}|
-      <strong>{{ insurance.name }}</strong> |{% endfor %}
-    </p>
-    <a class="therapist-link" href="/{{ therapist.id }}"
-      >Learn more about {{ therapist.first_name }}</a
-    >
-  </div>
-  {% endfor %}
-</div>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <div id="hero">
+        <h1>Anchors of Hope Counseling Center</h1>
+        <main id="about-aohcc">
+            {{ about_us.text }}
+        </main>
+    </div>
+    <h2 id="therapist-header">Our therapists</h2>
+    <div id="therapists">
+        {% for therapist in therapists %}
+            <div class="therapist">
+                <img class="bio-pic"
+                     alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
+                     src="{{ therapist.picture }}" />
+                <h3 class="therapist-name">{{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}</h3>
+                <p class="insurances">
+                    Insurance:
+                    {% for insurance in therapist.insurances.all %}
+                        |
+                        <strong>{{ insurance.name }}</strong> |
+                    {% endfor %}
+                </p>
+                <a class="therapist-link" href="/{{ therapist.id }}">Learn more about {{ therapist.first_name }}</a>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}
