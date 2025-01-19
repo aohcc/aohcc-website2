@@ -115,6 +115,10 @@ footer {
   transition: 300ms ease-in-out;
 }
 
+.office-info {
+  margin: 0.5rem auto;
+}
+
 #instagram,
 #facebook {
   display: inline-block;
