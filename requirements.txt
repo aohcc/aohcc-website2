@@ -12,6 +12,7 @@ pathspec==0.12.1
 pillow==11.1.0
 platformdirs==4.3.6
 pyright==1.1.392.post0
+python-dotenv==1.0.1
 sqlparse==0.5.1
 types-PyYAML==6.0.12.20241230
 typing_extensions==4.12.2

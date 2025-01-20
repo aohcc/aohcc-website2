@@ -9,6 +9,9 @@ from .forms import ContactForm
 
 def homepage_view(request):
     therapists = Therapist.objects.filter(active=True).order_by("last_name")
+    therapist_insurances = {
+        therapist.first_name: therapist.insurances.all() for therapist in therapists
+    }
     about_us = AboutUs.objects.get(pk=1)
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -27,12 +30,17 @@ def homepage_view(request):
                 recipients,
             )
 
-            return HttpResponseRedirect("")
+            return HttpResponseRedirect("/thank-you")
 
     else:
         form = ContactForm()
 
-    context = {"therapists": therapists, "form": form, "about_us": about_us}
+    context = {
+        "therapists": therapists,
+        "therapist_insurances": therapist_insurances,
+        "form": form,
+        "about_us": about_us,
+    }
 
     return render(request, "home.html", context)
 
@@ -56,7 +64,7 @@ def therapist_view(request, therapist_pk):
                 recipients,
             )
 
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/thank-you")
 
     else:
         form = ContactForm()
@@ -84,7 +92,7 @@ def faq_view(request):
                 recipients,
             )
 
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/thank-you")
 
     else:
         form = ContactForm()
@@ -113,7 +121,7 @@ def insurance_view(request):
                 recipients,
             )
 
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/thank-you")
 
     else:
         form = ContactForm()
@@ -141,9 +149,13 @@ def contact_form_view(request):
                 recipients,
             )
 
-            return HttpResponseRedirect("/thanks/")
+            return HttpResponseRedirect("/thank-you")
 
     else:
         form = ContactForm()
 
     return render(request, "base.html", {"form": form})
+
+
+def thank_you_view(request):
+    return render(request, "thank_you.html")

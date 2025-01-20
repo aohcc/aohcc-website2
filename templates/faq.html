@@ -1,48 +1,50 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<section class="faq">
-  <h2>{{ faqs.0.question }}</h2>
-  {{ faqs.0.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.1.question }}</h2>
-  {{ faqs.1.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.2.question }}</h2>
-  <ul id="therapy-rates">
-    <li>Individual psychotherapy (55 min.): $150</li>
-    <li>Couple psychotherapy (55 min.): $175</li>
-    <li>Family psychotherapy* (55 min.): $175</li>
-  </ul>
-  {{ faqs.2.answer|linebreaks }}
-  <p id="therapy-rates-note">
-    *Please note that all appointments with persons under the age of 18 are
-    billed at the family psychotherapy rate.
-  </p>
-</section>
-<section class="faq">
-  <h2>{{ faqs.3.question }}</h2>
-  {{ faqs.3.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.4.question }}</h2>
-  {{ faqs.4.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.5.question }}</h2>
-  {{ faqs.5.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.6.question }}</h2>
-  {{ faqs.6.answer|linebreaks }}
-</section>
-<section class="faq">
-  <h2>{{ faqs.7.question }}</h2>
-  {{ faqs.7.answer|linebreaks }}
-  <a
-    id="confidentiality-download"
-    href="../static/documents/confidentiality_handout.docx"
-    >Download confidentiality handout</a
-  >
-</section>
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <main>
+        <h1>FAQs</h1>
+        <section class="faq">
+            <h2>{{ faqs.0.question }}</h2>
+            {{ faqs.0.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.1.question }}</h2>
+            {{ faqs.1.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.2.question }}</h2>
+            <ul id="therapy-rates">
+                <li>Individual psychotherapy (55 min.): $150</li>
+                <li>Couple psychotherapy (55 min.): $175</li>
+                <li>Family psychotherapy* (55 min.): $175</li>
+            </ul>
+            {{ faqs.2.answer|linebreaks }}
+            <p id="therapy-rates-note">
+                *Please note that all appointments with persons under the age of 18 are
+                billed at the family psychotherapy rate.
+            </p>
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.3.question }}</h2>
+            {{ faqs.3.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.4.question }}</h2>
+            {{ faqs.4.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.5.question }}</h2>
+            {{ faqs.5.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.6.question }}</h2>
+            {{ faqs.6.answer|linebreaks }}
+        </section>
+        <section class="faq">
+            <h2>{{ faqs.7.question }}</h2>
+            {{ faqs.7.answer|linebreaks }}
+            <a id="confidentiality-download"
+               href="../static/documents/confidentiality_handout.docx">Download confidentiality handout</a>
+        </section>
+    </main>
 {% endblock %}

@@ -2,6 +2,10 @@
   --outline-color: #f4f3ee;
 }
 
+main h1 {
+  text-align: center;
+}
+
 .faq {
   width: 80%;
   margin: 0 auto;
