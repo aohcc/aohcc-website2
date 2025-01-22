@@ -51,11 +51,12 @@
   margin: 1em auto 0 auto;
 }
 
-.insurances {
-  margin: 0.75em auto 1.5em auto;
+#accepting-clients {
+  font-weight: 600;
 }
 
 .therapist-link {
+  display: inline-block;
   text-decoration: none;
   font-weight: 400;
   color: var(--outline-color);

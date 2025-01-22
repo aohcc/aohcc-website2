@@ -27,6 +27,7 @@ class Therapist(models.Model):
     last_name = models.CharField(max_length=50)
     license_type = models.CharField(max_length=50)
     active = models.BooleanField(default=True)
+    accepting_clients = models.CharField(max_length=50)
     certifications = models.ManyToManyField(Certification)
     insurances = models.ManyToManyField(Insurance)
     populations = models.ManyToManyField(Population)
@@ -67,3 +68,6 @@ class AboutUs(models.Model):
 
     def __str__(self) -> str:
         return "About us"
+
+    class Meta:
+        verbose_name_plural = "About us"

@@ -19,11 +19,12 @@
                          alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
                          src="{{ therapist.picture }}" />
                     <h3 class="therapist-name">{{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}</h3>
-                    <p>Works with: {{ therapist.to_populations_string }}</p>
-                    <p class="insurances">
+                    <p id="populations">Works with: {{ therapist.to_populations_string }}</p>
+                    <p id="insurances">
                         Insurance:
                         {{ therapist.to_insurances_string }}
                     </p>
+                    <p id="accepting-clients">{{ therapist.accepting_clients }}</p>
                     <a class="therapist-link" href="/{{ therapist.id }}">Learn more about {{ therapist.first_name }}</a>
                 </div>
             {% endfor %}
