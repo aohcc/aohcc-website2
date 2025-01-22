@@ -36,6 +36,15 @@ class Therapist(models.Model):
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.license_type}"
 
+    def to_insurances_string(self):
+        return ", ".join(self.insurances.all().values_list("name", flat=True))
+
+    def to_populations_string(self):
+        return ", ".join(self.populations.all().values_list("group", flat=True))
+
+    def to_certifications_string(self):
+        return ", ".join(self.insurances.all().values_list("name", flat=True))
+
 
 class Faq(models.Model):
     question = models.CharField(max_length=255)
