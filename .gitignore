@@ -9,3 +9,4 @@ static/background_img
 db.sqlite3
 mypy.ini
 roadmap.md
+.env

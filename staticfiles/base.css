@@ -1,0 +1,177 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+html,
+body {
+  margin: 0;
+  color: var(--outline-color);
+  background-image: url("background_img/clayton-malquist.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#container {
+  width: 80vw;
+  background-color: rgba(44, 42, 54, 0.8);
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+#homepage-link {
+  width: 200px;
+  margin-bottom: 2em;
+  border-radius: 10px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 2rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  color: inherit;
+  border: 1px solid var(--outline-color);
+  border-radius: 2rem;
+  padding: 5px 10px;
+  margin: auto 1rem;
+  width: 90px;
+  transition: 300ms ease-in-out;
+}
+
+.links a:hover,
+.links a:focus {
+  color: #ffccb0;
+  font-weight: 600;
+  border: 1px solid #ffccb0;
+  box-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#contact-form label {
+  display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+  background-color: transparent;
+  color: var(--outline-color);
+  border: 1px solid var(--outline-color);
+  margin: 0.5rem auto;
+  padding: 0.75rem;
+  width: 90%;
+  border-radius: 5px;
+}
+
+#contact-form input[type="submit"] {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 400;
+  color: inherit;
+  border: 1px solid var(--outline-color);
+  border-radius: 2rem;
+  padding: 5px 10px;
+  margin: 1rem;
+  width: 90px;
+  transition: 300ms ease-in-out;
+}
+
+#contact-form input[type="submit"]:hover,
+#contact-form input[type="submit"]:focus {
+  color: #ffccb0;
+  font-weight: 600;
+  border: 1px solid #ffccb0;
+  box-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
+.office-info {
+  margin: 0.5rem auto;
+}
+
+#instagram,
+#facebook {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 20px;
+  text-indent: -9999px;
+}
+
+#instagram {
+  background-image: url("icons/instagram.png");
+  background-size: cover;
+}
+
+#facebook {
+  background-image: url("icons/facebook.png");
+  background-size: cover;
+}
+
+.footer-link {
+  color: var(--outline-color);
+  font-weight: 600;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+  color: #ffccb0;
+  text-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
+@media (max-width: 480px) {
+  #container {
+    width: auto;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 20px;
+  }
+
+  .links {
+    flex-direction: row;
+    width: 100vw;
+    font-weight: 600;
+    margin: 20px 0 0;
+  }
+
+  .links a {
+    text-decoration: none;
+    margin: 0;
+  }
+}

@@ -1,0 +1,24 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+.therapist-bio {
+  text-align: center;
+}
+.therapist-img {
+  width: 20em;
+  border-radius: 10px;
+}
+
+.bio-text {
+  text-align: initial;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media (max-width: 480px) {
+  .bio-text {
+    width: 90%;
+  }
+}
