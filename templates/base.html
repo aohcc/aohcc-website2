@@ -1,75 +1,104 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="description"
-              content="Located in the Charleston, SC, Anchors of Hope Counseling Center provides high quality counseling services for families, couples, and individuals in the Lowcountry." />
-        <title>Anchors of Hope</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-              rel="stylesheet" />
-        <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
-        <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" />
-        <link rel="stylesheet" href="{% static 'therapist.css' %}" type="text/css" />
-        <link rel="stylesheet" href="{% static 'insurance.css' %}" type="text/css" />
-        <link rel="stylesheet" href="{% static 'faq.css' %}" type="text/css" />
-    </head>
-    <body>
-        <div id="container">
-            <nav class="navbar">
-                <div id="homepage-logo">
-                    <img id="homepage-link"
-                         src="{% static 'logo/aohcc_logo_1200px.png' %}"
-                         alt="Anchors of Hope Counseling Center." />
-                </div>
-                <ul class="links">
-                    <li>
-                        <a href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'insurance' %}">Insurance</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'faq' %}">FAQ</a>
-                    </li>
-                </ul>
-            </nav>
-            {% block content %}{% endblock %}
-            <footer>
-                <h2>Contact us!</h2>
-                <form id="contact-form" method="post">
-                    {% csrf_token %} {{ form }}
-                    <input type="submit" value="Submit" />
-                </form>
-                <div>
-                    <h3 class="office-info">Office phone</h3>
-                    <p class="office-info">(843) 377-5322</p>
-                    <h3 class="office-info">Office address</h3>
-                    <p class="office-info">928 Savage Rd.</p>
-                    <p class="office-info">Charleston, SC 29414</p>
-                </div>
-                <div>
-                    <a id="instagram"
-                       href="https://www.instagram.com/anchorsofhopecounseling/">Instagram</a>
-                    <a id="facebook"
-                       href="https://www.facebook.com/share/1Afjuqig9p/?mibextid=LQQJ4d">Facebook</a>
-                </div>
-                <p>
-                    <a class="footer-link"
-                       href="../static/documents/aohcc_notice_of_privacy_practices_v2.pdf">Notice of Privacy Practices</a>
-                </p>
-                <p>
-                    Background photo by
-                    <a class="footer-link"
-                       href="https://unsplash.com/@cmalquist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Clayton Malquist</a>
-                    on
-                    <a class="footer-link"
-                       href="https://unsplash.com/photos/a-large-bridge-spanning-over-a-body-of-water-hfFM0QsCn3g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
-                </p>
-            </footer>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Located in the Charleston, SC, Anchors of Hope Counseling Center provides high quality counseling services for families, couples, and individuals in the Lowcountry."
+    />
+    <title>Anchors of Hope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="{% static 'icons/favicon-32x32.png' %}"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css" />
+    <link rel="stylesheet" href="{% static 'home.css' %}" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="{% static 'therapist.css' %}"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'insurance.css' %}"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="{% static 'faq.css' %}" type="text/css" />
+  </head>
+  <body>
+    <div id="container">
+      <nav class="navbar">
+        <div id="homepage-logo">
+          <img
+            id="homepage-link"
+            src="{% static 'logo/aohcc_logo_1200px.png' %}"
+            alt="Anchors of Hope Counseling Center."
+          />
         </div>
-    </body>
+        <ul class="links">
+          <li>
+            <a href="{% url 'home' %}">Home</a>
+          </li>
+          <li>
+            <a href="{% url 'insurance' %}">Insurance</a>
+          </li>
+          <li>
+            <a href="{% url 'faq' %}">FAQ</a>
+          </li>
+        </ul>
+      </nav>
+      {% block content %}{% endblock %}
+      <footer>
+        <div>
+          <h3 class="office-info">Office phone</h3>
+          <p class="office-info">(843) 377-5322</p>
+          <h3 class="office-info">Office address</h3>
+          <p class="office-info">928 Savage Rd.</p>
+          <p class="office-info">Charleston, SC 29414</p>
+        </div>
+        <div>
+          <a
+            id="instagram"
+            href="https://www.instagram.com/anchorsofhopecounseling/"
+            >Instagram</a
+          >
+          <a
+            id="facebook"
+            href="https://www.facebook.com/share/1Afjuqig9p/?mibextid=LQQJ4d"
+            >Facebook</a
+          >
+        </div>
+        <p>
+          <a
+            class="footer-link"
+            href="../static/documents/aohcc_notice_of_privacy_practices_v2.pdf"
+            >Notice of Privacy Practices</a
+          >
+        </p>
+        <p>
+          Background photo by
+          <a
+            class="footer-link"
+            href="https://unsplash.com/@cmalquist?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Clayton Malquist</a
+          >
+          on
+          <a
+            class="footer-link"
+            href="https://unsplash.com/photos/a-large-bridge-spanning-over-a-body-of-water-hfFM0QsCn3g?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
+            >Unsplash</a
+          >
+        </p>
+      </footer>
+    </div>
+  </body>
 </html>

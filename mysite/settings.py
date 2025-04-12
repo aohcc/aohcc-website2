@@ -140,4 +140,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Testing email settings
 # REMOVE FOR PRODUCTION
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+DEFAULT_FROM_EMAIL = "clientcare@aohcc.com"
+NOTIFY_EMAIL = "clientcare@aohcc.com"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.mailgun.org"
+EMAIL_HOST_USER = env.str("EMAIL_USERNAME")
+EMAIL_HOST_PASSWORD = env.str("EMAIL_PASSWORD")
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

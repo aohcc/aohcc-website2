@@ -6,6 +6,14 @@ from .models import Therapist, Faq, InsurancePageText, AboutUs
 
 from .forms import ContactForm
 
+def success_view(request):
+    therapists = Therapist.objects.filter(active=True).order_by("last_name")
+    about_us = AboutUs.objects.get(pk=1)
+
+    context = {"therapists": therapists, "about_us": about_us}
+
+    return render(request, "success.html", context)
+
 
 def homepage_view(request):
     therapists = Therapist.objects.filter(active=True).order_by("last_name")
@@ -18,7 +26,7 @@ def homepage_view(request):
             phone = form.cleaned_data["phone"]
             message = form.cleaned_data["message"]
 
-            recipients = ["ryan@aohcc.com"]
+            recipients = ["clientcare@aohcc.com"]
 
             send_mail(
                 "AOHCC Inquiry from Website",
@@ -27,7 +35,7 @@ def homepage_view(request):
                 recipients,
             )
 
-            return HttpResponseRedirect("")
+            return HttpResponseRedirect("success")
 
     else:
         form = ContactForm()
@@ -47,11 +55,11 @@ def therapist_view(request, therapist_pk):
             phone = form.cleaned_data["phone"]
             message = form.cleaned_data["message"]
 
-            recipients = ["ryan@aohcc.com"]
+            recipients = ["clientcare@aohcc.com"]
 
             send_mail(
                 "AOHCC Inquiry from Website",
-                f"{name} {phone} {message}",
+                f"{name}\n{phone}\n{email}\n{message}",
                 email,
                 recipients,
             )
@@ -75,11 +83,11 @@ def faq_view(request):
             email = form.cleaned_data["email"]
             phone = form.cleaned_data["phone"]
             message = form.cleaned_data["message"]
-            recipients = ["ryan@aohcc.com"]
+            recipients = ["clientcare@aohcc.com"]
 
             send_mail(
                 "AOHCC Inquiry from Website",
-                f"{name} {phone} {message}",
+                f"{name}\n{phone}\n{email}\n{message}",
                 email,
                 recipients,
             )
@@ -104,11 +112,11 @@ def insurance_view(request):
             phone = form.cleaned_data["phone"]
             message = form.cleaned_data["message"]
 
-            recipients = ["ryan@aohcc.com"]
+            recipients = ["clientcare@aohcc.com"]
 
             send_mail(
                 "AOHCC Inquiry from Website",
-                f"{name} {phone} {message}",
+                f"{name}\n{phone}\n{email}\n{message}",
                 email,
                 recipients,
             )
@@ -132,11 +140,11 @@ def contact_form_view(request):
             phone = form.cleaned_data["phone"]
             message = form.cleaned_data["message"]
 
-            recipients = ["ryan@aohcc.com"]
+            recipients = ["clientcare@aohcc.com"]
 
             send_mail(
                 "AOHCC Inquiry from Website",
-                f"{name} {phone} {message}",
+                f"{name}\n{phone}\n{email}\n{message}",
                 email,
                 recipients,
             )

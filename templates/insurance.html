@@ -1,15 +1,20 @@
-{% extends "base.html" %}
-{% load static %}
-{% block content %}
-    <main id="insurance">
-        <h1>Use your insurance benefits</h1>
-        <section>
-            <h2>{{ insurance_sections.1.name }}</h2>
-            {{ insurance_sections.1.text|safe|linebreaks }}
-        </section>
-        <section>
-            <h2>{{ insurance_sections.0.name }}</h2>
-            {{ insurance_sections.0.text|linebreaks }}
-        </section>
-    </main>
+{% extends "base.html" %} {% load static %} {% block content %}
+<main id="insurance">
+  <h1>Use your insurance benefits</h1>
+  <section>
+    <h2>{{ insurance_sections.1.name }}</h2>
+    {{ insurance_sections.1.text|safe|linebreaks }}
+  </section>
+  <section>
+    <h2>{{ insurance_sections.0.name }}</h2>
+    {{ insurance_sections.0.text|linebreaks }}
+  </section>
+</main>
+<div id="form">
+  <h2>Contact us!</h2>
+  <form id="contact-form" method="post">
+    {% csrf_token %} {{ form }}
+    <input type="submit" value="Submit" />
+  </form>
+</div>
 {% endblock %}
