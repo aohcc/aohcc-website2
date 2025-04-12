@@ -17,13 +17,14 @@ main h1 {
 }
 
 #therapy-rates {
-  list-style: none;
-  padding: 0;
+  margin: 0 auto;
+  border: 1px solid var(--outline-color);
+  border-radius: 5px;
+  padding: 1rem;
 }
 
-#therapy-rates li {
-  padding: 1rem;
-  border-bottom: 1px solid var(--outline-color);
+#therapy-rates td {
+  padding: 1rem 0;
 }
 
 #therapy-rates-note {

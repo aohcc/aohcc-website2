@@ -9,11 +9,13 @@
 </section>
 <section class="faq">
   <h2>{{ faqs.2.question }}</h2>
-  <ul id="therapy-rates">
-    <li>Individual psychotherapy (55 min.): $150</li>
-    <li>Couple psychotherapy (55 min.): $175</li>
-    <li>Family psychotherapy* (55 min.): $175</li>
-  </ul>
+  <table id="therapy-rates">
+    <tr>
+      <td>Individual psychotherapy (55 min.): $150</tr>
+      <td>Couple psychotherapy (55 min.): $175</tr>
+      <td>Family psychotherapy* (55 min.): $175</tr>
+    </tr>
+  </table>
   {{ faqs.2.answer|linebreaks }}
   <p id="therapy-rates-note">
     *Please note that all appointments with persons under the age of 18 are
@@ -41,7 +43,7 @@
   {{ faqs.7.answer|linebreaks }}
   <a
     id="confidentiality-download"
-    href="../static/documents/confidentiality_handout.docx"
+    href="../static/documents/aohcc_confidentiality_handout.pdf"
     >Download confidentiality handout</a
   >
 </section>

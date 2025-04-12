@@ -2,12 +2,30 @@
 <main id="insurance">
   <h1>Use your insurance benefits</h1>
   <section>
-    <h2>{{ insurance_sections.1.name }}</h2>
-    {{ insurance_sections.1.text|safe|linebreaks }}
+    <h2>{{ insurance_sections.0.name }}</h2>
+    {{ insurance_sections.0.text|safe|linebreaks }}
   </section>
   <section>
-    <h2>{{ insurance_sections.0.name }}</h2>
-    {{ insurance_sections.0.text|linebreaks }}
+    <h2>In-network benefits</h2>
+    <p>
+      Each therapist at Anchors of Hope Counseling Center is an independent
+      contractor who chooses to partner with us. As such, each therapist makes
+      the decision about which insurance providers (if any) to become panelled
+      with. We know that for many, being able to use your insurance benefits is
+      absolutely essential when seeking out mental health services. That is why,
+      in the
+      <a href="{% url 'home' %}#therapist-header"
+        >"Therapists" section of our homepage</a
+      >, we have listed under each individual therapist what insurances that
+      therapist accepts. Please note that while we hope this way of highlighting
+      what insurance each provider accepts makes finding the right therapist
+      much easier, it is very important that you verify your insurance benefits
+      prior to seeing any provider (whether at AOHCC or elsewhere).
+    </p>
+    <p>
+      For those wanting to utilize their Medicare benefits, please note that
+      unfortunately none of our providers accepts Medicare.
+    </p>
   </section>
 </main>
 <div id="form">

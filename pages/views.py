@@ -39,10 +39,14 @@ def homepage_view(request):
 
             return HttpResponseRedirect("success")
 
+    else:
+        form = ContactForm()
+
     context = {
         "therapists": therapists,
         "therapist_insurances": therapist_insurances,
         "about_us": about_us,
+        "form": form,
     }
 
     return render(request, "home.html", context)

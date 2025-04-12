@@ -20,12 +20,11 @@
       src="{{ therapist.picture }}"
     />
     <h3 class="therapist-name">
-      {{ therapist.first_name }} {{ therapist.last_name }}, {{
-      therapist.license_type }}
+      {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
     </h3>
     <p class="insurances">
       Insurance: {% for insurance in therapist.insurances.all %} |
-      <strong>{{ insurance.name }}</strong> | {% endfor %}
+      {{ insurance.name }} | {% endfor %}
     </p>
     <a class="therapist-link" href="/{{ therapist.id }}"
       >Learn more about {{ therapist.first_name }}</a
