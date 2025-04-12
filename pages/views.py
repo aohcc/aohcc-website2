@@ -14,9 +14,11 @@ def success_view(request):
 
     return render(request, "success.html", context)
 
-
 def homepage_view(request):
     therapists = Therapist.objects.filter(active=True).order_by("last_name")
+    therapist_insurances = {
+        therapist.first_name: therapist.insurances.all() for therapist in therapists
+    }
     about_us = AboutUs.objects.get(pk=1)
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -37,10 +39,11 @@ def homepage_view(request):
 
             return HttpResponseRedirect("success")
 
-    else:
-        form = ContactForm()
-
-    context = {"therapists": therapists, "form": form, "about_us": about_us}
+    context = {
+        "therapists": therapists,
+        "therapist_insurances": therapist_insurances,
+        "about_us": about_us,
+    }
 
     return render(request, "home.html", context)
 

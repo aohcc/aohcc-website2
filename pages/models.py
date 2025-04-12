@@ -27,6 +27,7 @@ class Therapist(models.Model):
     last_name = models.CharField(max_length=50)
     license_type = models.CharField(max_length=50)
     active = models.BooleanField(default=True)
+    accepting_clients = models.CharField(max_length=50)
     certifications = models.ManyToManyField(Certification)
     insurances = models.ManyToManyField(Insurance)
     populations = models.ManyToManyField(Population)
@@ -35,6 +36,15 @@ class Therapist(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.license_type}"
+
+    def to_insurances_string(self):
+        return ", ".join(self.insurances.all().values_list("name", flat=True))
+
+    def to_populations_string(self):
+        return ", ".join(self.populations.all().values_list("group", flat=True))
+
+    def to_certifications_string(self):
+        return ", ".join(self.insurances.all().values_list("name", flat=True))
 
 
 class Faq(models.Model):
@@ -58,3 +68,6 @@ class AboutUs(models.Model):
 
     def __str__(self) -> str:
         return "About us"
+
+    class Meta:
+        verbose_name_plural = "About us"
