@@ -6,7 +6,7 @@ html,
 body {
   margin: 0;
   color: var(--outline-color);
-  background-image: url("background_img/clayton-malquist-hfFM0QsCn3g-unsplash.jpg");
+  background-image: url("background_img/clayton-malquist.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -70,7 +70,8 @@ body {
   transition: 300ms ease-in-out;
 }
 
-footer {
+footer,
+#form {
   display: flex;
   flex-direction: column;
   align-items: center;

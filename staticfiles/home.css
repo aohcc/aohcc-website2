@@ -1,0 +1,93 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+#hero {
+  text-align: center;
+  padding: 0 1rem 1rem;
+}
+
+#main-logo {
+  width: 200px;
+}
+
+#office-img {
+  display: block;
+  width: 80%;
+  margin: 0 auto 2rem;
+  border-radius: 5px;
+}
+
+#about-aohcc {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+#therapist-header {
+  text-align: center;
+}
+
+#therapists {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.therapist {
+  margin: 10px auto;
+  width: 40%;
+  text-align: center;
+}
+
+.bio-pic {
+  height: 300px;
+  border-radius: 50%;
+  margin-top: 1em;
+}
+
+.therapist-name {
+  margin: 1em auto 0 auto;
+}
+
+.insurances {
+  margin: 0.75em auto 1.5em auto;
+}
+
+.therapist-link {
+  text-decoration: none;
+  font-weight: 400;
+  color: var(--outline-color);
+  border: 1px solid var(--outline-color);
+  border-radius: 2rem;
+  padding: 10px 15px;
+  transition: 300ms ease-in-out;
+}
+
+.therapist-link:hover,
+.therapist-link:focus {
+  color: #ffccb0;
+  font-weight: 600;
+  border: 1px solid #ffccb0;
+  box-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
+@media (max-width: 769px) {
+  #about-aohcc {
+    width: 90%;
+  }
+
+  #therapists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .therapist {
+    margin: 10px auto;
+    width: 80vw;
+    text-align: center;
+  }
+}

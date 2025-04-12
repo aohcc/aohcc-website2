@@ -1,0 +1,45 @@
+:root {
+  --outline-color: #f4f3ee;
+}
+
+.faq {
+  width: 80%;
+  margin: 0 auto;
+  text-align: initial;
+}
+
+.faq h2 {
+  text-align: center;
+}
+
+#therapy-rates {
+  list-style: none;
+  padding: 0;
+}
+
+#therapy-rates li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--outline-color);
+}
+
+#therapy-rates-note {
+  font-weight: 600;
+}
+
+#confidentiality-download {
+  color: var(--outline-color);
+  font-weight: 600;
+}
+
+#confidentiality-download:hover,
+#confidentiality-download:focus {
+  color: #ffccb0;
+  text-shadow: 0px 0px 5px #ffccb0;
+  transition: 300ms ease-in-out;
+}
+
+@media (max-width: 480px) {
+  .faq {
+    width: 90%;
+  }
+}
