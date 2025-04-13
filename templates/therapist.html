@@ -2,7 +2,7 @@
 <div class="therapist-bio">
   <img
     class="therapist-img"
-    src="../{{ therapist.picture }}"
+    src="{% static 'bio_pics/' %}{{ therapist.picture_filename }}"
     alt="Therapist {{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
   />
   <h1>

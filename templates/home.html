@@ -17,7 +17,7 @@
     <img
       class="bio-pic"
       alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
-      src="{{ therapist.picture }}"
+      src="{% static 'bio_pics/' %}{{ therapist.picture_filename }}"
     />
     <h3 class="therapist-name">
       {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
