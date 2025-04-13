@@ -32,7 +32,7 @@ class Therapist(models.Model):
     insurances = models.ManyToManyField(Insurance)
     populations = models.ManyToManyField(Population)
     bio = models.TextField()
-    picture_filename = models.CharField(max_length=50)
+    picture_filename = models.CharField(max_length=50, default="ofarrell_ryan.jpg")
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}, {self.license_type}"
