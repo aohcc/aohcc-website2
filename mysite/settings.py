@@ -38,8 +38,6 @@ CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
 
-SECURE_SSL_REDIRECT = True
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -90,14 +88,15 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": "aohcc_website_data",
-        "USERNAME": env.str("DB_USERNAME"),
-        "PASSWORD": env.str("DB_PASSWORD"),
-        "HOST": "localhost",
-        "PORT": "",
-    }
+    "default": env.dj_db_url("DATABASE_URL", default="sqlite:///db.sqlite3"),
+    # {
+    #     "ENGINE": "django.db.backends.postgresql",
+    #     "NAME": "aohcc_website_data",
+    #     "USERNAME": env.str("DB_USERNAME"),
+    #     "PASSWORD": env.str("DB_PASSWORD"),
+    #     "HOST": "localhost",
+    #     "PORT": "",
+    # }
 }
 
 # Password validation
