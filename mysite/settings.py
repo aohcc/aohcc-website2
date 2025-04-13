@@ -91,12 +91,12 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": "aohcc_website_data",
         "USERNAME": env.str("DB_USERNAME"),
         "PASSWORD": env.str("DB_PASSWORD"),
         "HOST": "localhost",
-        "PORT": "5432",
+        "PORT": "",
     }
 }
 
