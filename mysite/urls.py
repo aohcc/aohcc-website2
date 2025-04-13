@@ -17,8 +17,13 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
+from environs import Env
+
+# Variable for environmental variabls
+env = Env()
+env.read_env()
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
+    path(env.str("ADMIN"), admin.site.urls),
     path("", include("pages.urls"))
 ]
