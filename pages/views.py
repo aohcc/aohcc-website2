@@ -16,9 +16,26 @@ def success_view(request):
 
 def homepage_view(request):
     therapists = Therapist.objects.filter(active=True).order_by("last_name")
-    therapist_insurances = {
-        therapist.first_name: therapist.insurances.all() for therapist in therapists
-    }
+    therapists_info_list = []
+    for therapist in therapists:
+        insurances = []
+        populations = []
+        for insurance in therapist.insurances.all():
+            insurances.append(insurance.name)
+        for population in therapist.populations.all():
+            populations.append(population.group)
+        therapists_info_list.append(
+            {
+                "id": therapist.pk,
+                "first_name": therapist.first_name,
+                "last_name": therapist.last_name,
+                "license_type": therapist.license_type,
+                "accepting_new_clients": therapist.accepting_clients,
+                "insurances": ", ".join(insurances),
+                "populations": ", ".join(populations),
+                "picture_filename": therapist.picture_filename
+             }
+        )
     about_us = AboutUs.objects.get(pk=1)
     if request.method == "POST":
         form = ContactForm(request.POST)
@@ -43,8 +60,7 @@ def homepage_view(request):
         form = ContactForm()
 
     context = {
-        "therapists": therapists,
-        "therapist_insurances": therapist_insurances,
+        "therapists_info_list": therapists_info_list,
         "about_us": about_us,
         "form": form,
     }
