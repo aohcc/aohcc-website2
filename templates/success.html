@@ -12,20 +12,24 @@
 </div>
 <h2 id="therapist-header">Our therapists</h2>
 <div id="therapists">
-  {% for therapist in therapists %}
+  {% for therapist in therapists_info_list %}
   <div class="therapist">
     <img
       class="bio-pic"
       alt="{{ therapist.first_name }} {{ therapist.last_name }} smiling at the camera."
-      src="{{ therapist.picture }}"
+      src="{% static 'bio_pics/' %}{{ therapist.picture_filename }}"
     />
     <h3 class="therapist-name">
-      {{ therapist.first_name }} {{ therapist.last_name }}, {{
-      therapist.license_type }}
+      {{ therapist.first_name }} {{ therapist.last_name }}, {{ therapist.license_type }}
     </h3>
+    <p class="populations">
+      Works with: {{ therapist.populations }}
+    </p>
     <p class="insurances">
-      Insurance: {% for insurance in therapist.insurances.all %} |
-      <strong>{{ insurance.name }}</strong> | {% endfor %}
+      Insurance: {{ therapist.insurances }}
+    </p>
+    <p class="accepting-clients">
+      <strong>{{ therapist.accepting_new_clients }}</strong>
     </p>
     <a class="therapist-link" href="/{{ therapist.id }}"
       >Learn more about {{ therapist.first_name }}</a
